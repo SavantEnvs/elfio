@@ -1,0 +1,9 @@
+project: savantenvs/elfio
+target: elfio_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/elfio_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/elfio_fuzzer
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,10 @@
+# Prunes local build products from the build context. .git is deliberately NOT listed: the image
+# must carry the full mayhem-branch history. Fixtures and seeds (tests/, mayhem/*/testsuite, which
+# include committed .o/.a files) stay in the context; build.sh recreates build-tests/ itself.
+/build-tests/
+/build/
+/out/
+/CMakeCache.txt
+/CMakeFiles/
+/tests/ELFIOTest
+/tests/elfio_fuzzer
